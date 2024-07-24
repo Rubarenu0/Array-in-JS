@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        //removing array items from index
+        let array=[23,45,66,23,12,56]
+        array.splice(2,2);
+        console.log(array);
+
+        //array spreading
+        const arr1=[23,45,66,23,12,56];
+        const arr2=[54,96,90,32,43,12];
+        const comb=[...arr1,...arr2];
+        console.log(comb);
+
+        //inserting array item 
+        let arr=[10,12,31,94,16,40,80,19]
+        arr.splice(4,1,2);
+        console.log(arr);
+
+        //finding the longest string in the array
+        let str=["Ruba",
+            "Renugavathi",
+            "Hari Krishnan"
+        ]
+        function longeststr(){
+            return str.sort(function(a,b){
+                    return b.length-a.length;
+            })[0];
+        }
+        console.log(longeststr());
+
+
+        //Rotate an Array
+
+    function rotatearray(arr, rotateBy) {
+        const n = arr.length;
+        rotateBy %= n;
+    return arr.slice(rotateBy).concat(arr.slice(0, rotateBy));
+    }
+ 
+    const originalArray = [5,6,7,8,9,10];
+    const rotatedarray = rotatearray(originalArray, 2);
+    console.log(rotatedarray);
+    </script>
+</body>
+</html>
